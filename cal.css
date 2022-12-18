@@ -1,0 +1,120 @@
+* {
+    /*universal selector*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    /* body section*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0px 12px;
+    background: rgb(204, 199, 199);
+}
+
+.wrapper {
+    /*Wrapper class*/
+    width: 450px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px 10px;
+}
+
+header .current-date {
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+header .icons span {
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #242222;
+    background: #d1cdcd;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+header .icons span:hover {
+    background-color: #f2f2f2;
+}
+
+header .icons span:last-child {
+    margin-right: -10px;
+}
+
+/*calender Section*/
+.calender {
+    padding: 20px;
+}
+
+.calender ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.calender .days {
+    margin-bottom: 20px;
+}
+
+.calender ul li {
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+    position: relative;
+}
+
+.calender .weeks li {
+    font-weight: 600;
+    cursor: default;
+}
+
+.days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+
+}
+.inactive {
+    color: #aaa;
+}
+li.active {
+color: #f2f2f2;
+border-radius: 10px;
+}
+li::before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background: #f2f2f2;
+}
+li:hover::before {
+    background: #f2f2f2;
+}
+
+li.active::before{
+    background: black
+  }
